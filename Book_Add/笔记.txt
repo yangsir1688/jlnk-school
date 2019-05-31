@@ -1,0 +1,79 @@
+
+com.jlnk.school.entity
+com.jlnk.school.dao
+com.jlnk.school.dao.impl
+com.jlnk.school.service
+com.jlnk.school.service.impl
+com.jlnk.school.servlet
+com.jlnk.school.util
+com.jlnk.school.exception
+com.jlnk.school.test
+com.jlnk.school.sql
+
+导入jar
+    MySql
+    数据库连接池:  druid【阿里巴巴】/c3p0【休眠hibernate】/dbcp【阿帕奇apache】
+    上传 :           apache的jar：fileUpload & Io
+    封装对象的jar:   apache的jar：BeanUtil
+    数据库的执行sql: apache的jar：dbUtils
+ 配置文件：jdbc.properties
+
+1.实体类：
+    News：id[唯一的值] 发布时间  发布的作者  发布的内容
+            id                  int
+            createTime          String
+            author              String
+            content             String
+            description         String
+            CategoryId          Category
+
+2.网页jsp： 自己写 | 找合适的页面原型，改
+3.Servlet
+    1.设置编码
+    2.接收参数
+    3.将多个参数封装到一个对象中去 |  有一个对象
+    4.传递Service   | 假设不存在、 硬写。    接口  对象 = new  实现类
+        4.2. 对象.逻辑(CRUD)方法(对象)举个栗子：  userService.addUser(u);
+        4.3   接收上一步的返回值！  增删改 返回值类型 int 和0 进行比较  若大于0 表示成功！举个栗子：   int rows = userService.addUser(u);
+
+4.Service                           类型:接口 对象名  =  创建对象  |  接口不能够实例化   接口不能new接口（后面代码有误）UserDao userDao = new UserDao();
+    1. 实例化Dao对象 |  举个栗子 :   UserDao userDao = new UserDaoImpl();
+    2. 对应servlet中的逻辑逻辑(增删改查)方法   |  项目单独的逻辑方法在这里 |举个栗子 : userDao.addUser(u);
+    3. 传递到到UserDao接口中去，返回一个整数  |举个栗子 :int result = userDao.addUser(u); ， return result;
+
+5.
+
+
+
+/*************
+1. 动物科技学院
+2. 机械与土木工程学院
+3. 电气工程学院
+4. 中药学院
+5. 体育教学部
+6. 马克思主义学院
+7. 继续教育学院
+8. 图书馆
+
+
+------------------------------
+Get
+    速度快
+    安全性较低           参数与参数值会在地址栏中显示
+    提交的数据大小         大概4kb  比较小
+
+Post
+    速度较慢
+    安全性较高
+    提交的数据大小         理论是没有大小的
+    上传组件时候           必须采用Post
+
+
+    假设我在前台想执行一个操作：   查询数据: Get  速度快  没有安全性和大小问题 |  编码会乱码  查看BaseServlet时期的代码！
+
+    查询：
+            查询所有
+            指定查询
+                模糊查询：like    数据库通配符:%
+
+

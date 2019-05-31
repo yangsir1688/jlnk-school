@@ -1,0 +1,12 @@
+create database users;
+
+use users;
+
+create  table user(
+
+  id  int primary  key  auto_increment,
+  username varchar(50) not null unique ,
+  password varchar(50) not  null,
+  sex varchar(10)
+);
+

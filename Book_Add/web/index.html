@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<form id="myform">
+    图书名称：  <input type="text" name="bookName" id="bookName" >
+    图书价格：  <input type="text" name="bookPrice" id="bookPrice" >
+    <button id="btn">添加图书</button>
+    <input type="button" name="你愁啥" id="bookPrice" >
+</form>
+</body>
+</html>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // alert(98)
+            $.ajax({
+                url:"/myBookServlet",
+                type:"POST",
+                // data:{'bookName':$('#bookName').val(),'bookPrice':$('#bookPrice').val()},
+                data: $("#myform").serialize(),
+                success:function (data) {
+                    alert(data);
+                },
+                error:function (data) {
+                    alert(data);
+                }
+            });
+        });
+
+    });
+</script>

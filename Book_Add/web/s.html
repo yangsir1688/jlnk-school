@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+    <script src="js/jquery-1.7.2.min.js" ></script>
+</head>
+<body>
+<form>
+    图书名称：<input type="text" id="bookName" name="bookName" >
+    <input type="button" id="btn" value="添加图书" >
+</form>
+<!--<form action="/bookServlet" method="post">-->
+<!--图书名称：<input type="text" name="bookName" >-->
+<!--<input type="submit" value="添加图书" >-->
+<!--</form>-->
+</body>
+</html>
+<script>
+
+
+    $(function () {
+        $("#btn").click(function () {
+            var bookName = $('#bookName').val();
+            alert(bookName)
+            $.ajax({
+                url:"/bookServlet",//访问地址 |  这是 IntellJ IDEA 特有的性质   不需要有项目名称
+                type:"POST",//提交方式  采用的是post
+                dataType:'json',
+                data:{"bookName":bookName},//参数数据:   内容是 参数  =   参数值  |  将参数值bigCitySmallLove赋值给了 参数bookName
+                // 以上都没有问题，自动执行成功的回调函数
+                success:function (data) {
+                    alert(data);
+                }
+            });
+        });
+    });
+</script>
