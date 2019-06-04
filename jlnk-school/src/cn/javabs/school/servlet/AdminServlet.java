@@ -27,7 +27,7 @@ public class AdminServlet extends BaseServlet {
      * @throws ServletException
      * @throws IOException
      */
-    protected String userLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String userLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // 接受 前台jsp的参数
         String usercode = request.getParameter("usercode");

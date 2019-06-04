@@ -22,5 +22,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.70" level="application_server_libraries" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="commons-beanutils" level="project" />
+    <orderEntry type="library" name="DbcpUtil" level="project" />
   </component>
 </module>

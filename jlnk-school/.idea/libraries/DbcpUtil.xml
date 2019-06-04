@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="DbcpUtil">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/DbcpUtil.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/DbcpUtil.jar!/" />
+    </SOURCES>
+  </library>
+</component>
