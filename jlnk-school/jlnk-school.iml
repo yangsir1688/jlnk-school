@@ -23,5 +23,7 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="commons-beanutils" level="project" />
     <orderEntry type="library" name="DbcpUtil" level="project" />
+    <orderEntry type="library" name="commons-dbcp-1.4" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.1" level="project" />
   </component>
 </module>

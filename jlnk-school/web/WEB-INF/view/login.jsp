@@ -41,11 +41,11 @@
 				<%--$.messager.alert("消息提醒", "教师暂不能登录系统！", "warning");--%>
 				<%--return;--%>
 			<%--}--%>
-			
+			alert("ok");
 			var data = $("#form").serialize();
 			$.ajax({
 				type: "post",
-				url: "/adminServlet?method=userLogin",
+				url: "/adminServlet/userLogin",
 				data: data,
 				//dataType: "text", //返回数据类型
 				success: function(msg){

@@ -19,10 +19,11 @@ public class AdminDaoImpl implements AdminDao {
 
         try {
             String sql = "select * from admin where usercode = ? and password = ?";
-            return qr.query(sql,new BeanHandler<Admin>(Admin.class), usercode,password);
+            Admin admin = qr.query(sql, new BeanHandler<Admin>(Admin.class), usercode, password);
+            System.out.println("AdminDaoImpl中的admin："+admin);
+            return admin;
         } catch (SQLException e) {
           throw  new AdminLoginException(e);
         }
-
     }
 }

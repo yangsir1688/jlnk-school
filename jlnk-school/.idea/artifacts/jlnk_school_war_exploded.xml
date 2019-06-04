@@ -10,6 +10,8 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="commons-beanutils" />
+          <element id="library" level="project" name="DbcpUtil" />
+          <element id="library" level="project" name="commons-dbcp-1.4" />
         </element>
       </element>
     </root>
