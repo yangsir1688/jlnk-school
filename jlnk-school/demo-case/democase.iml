@@ -20,12 +20,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.70" level="application_server_libraries" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="commons-beanutils" level="project" />
-    <orderEntry type="library" name="DbcpUtil" level="project" />
-    <orderEntry type="library" name="commons-dbcp-1.4" level="project" />
-    <orderEntry type="library" name="commons-lang3-3.1" level="project" />
-    <orderEntry type="library" name="druid-1.1.10" level="project" />
+    <orderEntry type="module-library">
+      <library name="lib">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/web/WEB-INF/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
+      </library>
+    </orderEntry>
     <orderEntry type="module-library">
       <library name="JUnit4">
         <CLASSES>
@@ -36,5 +40,9 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="commons-dbutils-1.4" level="project" />
+    <orderEntry type="library" name="taglibs-standard-impl-1.2.5" level="project" />
+    <orderEntry type="library" name="jstl-1.2" level="project" />
+    <orderEntry type="library" name="commons-beanutils (2)" level="project" />
   </component>
 </module>

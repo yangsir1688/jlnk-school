@@ -1,0 +1,14 @@
+1.导入包 druid 和mysql 后续到如一个  dbutils
+2. 写了一个DruidUtils
+3. 配置文件 druid.properties 位于 src  务必记住不是在包里的
+4. 写了一个测试类  TestData   用于测试 目前与数据库是否连接成功。
+                        |--- 查询全部  如果查询到了  表示没有问题
+********************************************************************************
+
+1. 建立包
+2. 写了一个service    UserService
+                        |--  addUser（User user）        返回值类型 int
+                        |--  delUser（int id）           返回值类型 int
+                        |--  findAllUser（）。。。       返回值类型 List<User>
+
+                      saveUser()

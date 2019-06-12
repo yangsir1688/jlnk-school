@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-case/democase.iml" filepath="$PROJECT_DIR$/demo-case/democase.iml" />
       <module fileurl="file://$PROJECT_DIR$/jlnk-school.iml" filepath="$PROJECT_DIR$/jlnk-school.iml" />
     </modules>
   </component>
