@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	
+	<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	    version="2.1">
+	 <description>JSTL 1.1 am library</description>
+	  <display-name>JSTL am</display-name>
+	  <tlib-version>1.1</tlib-version>
+	  <short-name>am</short-name>
+	  <uri>http://bianyige.com/javabs</uri>
+	
+	  <function>
+	    <name>showCategoryName</name>
+	    <function-class>cn.javabs.bookstore.commons.MyFunction</function-class>
+	    <function-signature>java.lang.String showCategoryName(java.lang.String)</function-signature>
+	  </function>
+	   
+	</taglib>

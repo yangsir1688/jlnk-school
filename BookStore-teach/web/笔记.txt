@@ -1,0 +1,151 @@
+
+http://bolg.csdn.net/kese7952
+---------------------------------
+
+集合中的List
+		|--- ArrayList
+				|--- 查询快  增删慢
+		|--- LinkedList
+				|--- 增删快  查询慢
+
+
+---------------------------------
+在Java中 只要有@ 存在表示  是一个注解  annocation
+
+---------------------------------
+快捷键：
+	向下复制:  ctrl + alt + ↓  down 
+	向下移动:  alt + ↓  down 
+	alt+shift+s  -> r - tab
+	删除一整行:ctrl+d
+*************************************************
+
+servlet 是前台的jsp页面传入到后台的交互作用
+		从前台接受数据 request.getParameter("....");
+		
+函数:功能
+function
+
+方法：
+  主函数
+  普通函数
+  构造函数: 1. 类名就是函数名称 2.没有类型
+  抽象函数
+  静态函数
+  最终态函数  final
+
+
+*************************************************
+1. 改程序项目的编码
+	 jsp页面的编码
+
+ 2.后台：
+		分类管理
+		书籍管理
+        前台
+		注册、登陆  、邮箱
+		书籍显示、分页功能、分类显示
+		内容详情页
+		上传 
+			 --- io 流
+			 
+		
+ 3.技术选型：
+ 	Javaweb
+ 		 MVC架构模式
+ 		 	 Model 模型 			javabean  实体类
+			 View 视图  			jsp页面
+			 Controller 控制器	Servlet 
+		 		 	
+		 		 	
+	 		包
+				com.ambow.entity
+				com.ambow.service
+				com.ambow.dao
+				com.ambow.service.impl
+				com.ambow.dao.impl
+				com.ambow.web.servlet
+				com.ambow.exception
+				com.ambow.utils
+				...
+4. 分类功能：
+	  | --- 添加分类
+		  			|--- 1. 创建实体类： Category
+		  						|-- 3个属性  id name description
+		  						|-- 根据3个属性  生成getter和setter方法
+				    |---  2. 分类的业务逻辑接口： BusinessService	
+				    		void addCategory(Category category);
+				    |---  3. 分类的业务逻辑接口的实现类： BusinessService	
+				    		// 引进DAO
+				    		CategoryDao categoryDao = new CategoryDaoImpl();
+				    		void addCategory(Category category){
+				    			categoryDao.save(category);
+				    		}
+					|--- 4. ctrl+1
+							点击了  create interface  CategoryDao
+							点击了  create class  CategoryDaoImpl
+							点击了  create method  save
+							
+
+
+
+查询分类：
+			1. BusinessService	
+			
+注册
+			1. 创建用户实体类 User.java
+							|--- id
+							|--- username
+							|--- password
+							|--- sex
+			2. 在businessService接口中定义注册和登录的方法
+								|-- 注册  
+									|-- 函数名称  userRegister
+									|-- 参数为User类型的 user
+									|-- 返回值类型 void
+												 |---- 
+								|-- 登录  
+									|-- 函数名称  userLogin
+									|-- 参数为字符串类型的 username 和字符串类型的 password
+									|-- 返回值类型 User
+			3. 在businessService的实现类中进行重写以上两个方法
+								|--- 首先实例化UserDao
+								|--- 通过user进行设置UUID
+								|--- 利用userDao传递user对象
+								
+									
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+文件上传：（必须要具备如下要求！）
+	1. method 必须是 post
+	2. 要加上一属性 是  enctype = mulitpart/data-form		
+	3. 引入jar
+			|-- org.apache.commons.io
+			|-- org.apache.commons.fileupload	
+	4. 表单的属性
+		|-- input type="file" name = "photoname"		
+				
+				
+
+				 		
