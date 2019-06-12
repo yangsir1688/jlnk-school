@@ -79,7 +79,7 @@ public class UserServlet extends HttpServlet {
             session.setAttribute("USER_SESSION",u);// USER_SESSION 是一个记号|标记
             request.getRequestDispatcher("/admin/main.jsp").forward(request,response);
         }else{
-            request.setAttribute("msg","error");
+            request.setAttribute("msg","用户登录失败");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }
     }
@@ -121,10 +121,10 @@ public class UserServlet extends HttpServlet {
         }
         int rows = userService.updateUser(user);
         if (rows>0){
-            request.setAttribute("msg","success");
+            request.setAttribute("msg","修改用户成功");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }else{
-            request.setAttribute("msg","error");
+            request.setAttribute("msg","修改用户失败");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }
     }
@@ -136,10 +136,10 @@ public class UserServlet extends HttpServlet {
         int  userId = Integer.parseInt(id);
         int rows = userService.delUser(userId);
         if (rows>0){
-            request.setAttribute("msg","success");
+            request.setAttribute("msg","删除用户成功");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }else{
-            request.setAttribute("msg","error");
+            request.setAttribute("msg","删除用户失败");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }
 
@@ -158,10 +158,10 @@ public class UserServlet extends HttpServlet {
             int rows = userService.addUser(user);
             
             if (rows>0){
-                request.setAttribute("msg","success");
+                request.setAttribute("msg","添加用户成功");
                 request.getRequestDispatcher("/message.jsp").forward(request,response);
             }else{
-                request.setAttribute("msg","error");
+                request.setAttribute("msg","添加用户失败");
                 request.getRequestDispatcher("/message.jsp").forward(request,response);
             }
 
@@ -183,7 +183,7 @@ public class UserServlet extends HttpServlet {
             request.setAttribute("user",user);
             request.getRequestDispatcher("/admin/updateUser.jsp").forward(request,response);
         }else{
-            request.setAttribute("msg","error");
+            request.setAttribute("msg","用户数据回显失败");
             request.getRequestDispatcher("/message.jsp").forward(request,response);
         }
     }
